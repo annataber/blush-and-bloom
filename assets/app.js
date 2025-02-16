@@ -1,4 +1,5 @@
 function storeData(dataType, element) {
+
   // remove selected from any previously chosen item
   const items = document.querySelectorAll(`#view-${dataType} li`);
   Array.from(items).forEach((item) => {
@@ -17,7 +18,7 @@ function loadData(dataType) {
   const choice = window.localStorage.getItem(dataType);
 
   if (choice) {
-    storeData(dataType, document.querySelector(`li[data-choice='${choice}']`));
+    storeData(dataType, document.querySelector(`#view-${dataType} li[data-choice='${choice}']`));
   }
 }
 
@@ -34,15 +35,18 @@ async function fade(element, targetOpacity) {
   }
 }
 
-async function setView(view) {
+async function setView(view, button) {
   const current = document.querySelector('div.view-selected');
   const next = document.querySelector(`div#view-${view}`);
+
+  button?.classList.add('selected');
 
   if (current) {
     await fade(current, 0);
     current.classList.remove('view-selected');
   }
 
+  button?.classList.remove('selected');
   next.style.opacity = 0;
   next.classList.add('view-selected');
   await fade(next, 100);
