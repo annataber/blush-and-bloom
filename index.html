@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Blush & Bloom">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+  <!-- Splash Screen (optional) -->
+  <!-- <link rel="apple-touch-startup-image" href="splash-screen.png"> -->
+
+  <link rel="stylesheet" href="/assets/reset.css">
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <title>Blush & Bloom</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div id="view-splash" class="view">
+      <h1>Blush & Bloom</h1>
+      <h2>A Makeup App</h2>
+      <img src="/assets/images/sparkle.gif" />
+
+      <div class="button" onclick="setView('skin-tone')">Let's do this</div>
+    </div>
+
+    <div id="view-skin-tone" class="view">
+      <h2>What is your skin tone?</h2>
+
+      <ul class="color-chooser skin-tone">
+        <li class="color-1" data-choice="1" onclick="storeData('skin-tone', this)"></li>
+        <li class="color-2" data-choice="2" onclick="storeData('skin-tone', this)"></li>
+        <li class="color-3" data-choice="3" onclick="storeData('skin-tone', this)"></li>
+        <li class="color-4" data-choice="4" onclick="storeData('skin-tone', this)"></li>
+        <li class="color-5" data-choice="5" onclick="storeData('skin-tone', this)"></li>
+        <li class="color-6" data-choice="6" onclick="storeData('skin-tone', this)"></li>
+        <li class="color-7" data-choice="7" onclick="storeData('skin-tone', this)"></li>
+      </ul>
+
+      <div class="button" onclick="setView('hair-color')">Next</div>
+    </div>
+
+    <div id="view-hair-color" class="view">
+      <h2>What is your hair color?</h2>
+
+      <ul class="color-chooser hair-color">
+        <li class="color-1" data-choice="1" onclick="storeData('hair-color', this)"></li>
+        <li class="color-2" data-choice="2" onclick="storeData('hair-color', this)"></li>
+        <li class="color-3" data-choice="3" onclick="storeData('hair-color', this)"></li>
+        <li class="color-4" data-choice="4" onclick="storeData('hair-color', this)"></li>
+        <li class="color-5" data-choice="5" onclick="storeData('hair-color', this)"></li>
+      </ul>
+
+      <div class="button" onclick="setView('eye-color')">Next</div>
+    </div>
+
+    <div id="view-eye-color" class="view">
+      <h2>What is your eye color?</h2>
+
+      <ul class="color-chooser eye-color">
+        <li class="color-1" data-choice="1" onclick="storeData('eye-color', this)"></li>
+        <li class="color-2" data-choice="2" onclick="storeData('eye-color', this)"></li>
+        <li class="color-3" data-choice="3" onclick="storeData('eye-color', this)"></li>
+        <li class="color-4" data-choice="4" onclick="storeData('eye-color', this)"></li>
+        <li class="color-5" data-choice="5" onclick="storeData('eye-color', this)"></li>
+      </ul>
+
+      <div class="button" onclick="setView('hair-color')">Next</div>
+    </div>
+
+    <div id="view-style" class="view">
+      <h2>What is your personal style?</h2>
+
+      <ul class="color-chooser eye-color">
+        <li class="color-1" data-choice="1" onclick="storeData('style', this)"></li>
+        <li class="color-2" data-choice="2" onclick="storeData('style', this)"></li>
+        <li class="color-3" data-choice="3" onclick="storeData('style', this)"></li>
+        <li class="color-4" data-choice="4" onclick="storeData('style', this)"></li>
+        <li class="color-5" data-choice="5" onclick="storeData('style', this)"></li>
+      </ul>
+
+      <div class="button" onclick="setView('hair-color')">Next</div>
+    </div>
+  </div>
+  <script src="/assets/app.js"></script>
+  <script>
+    [
+      'skin-tone',
+      'hair-color',
+      'eye-color'
+    ].forEach((dataType) => loadData(dataType));
+
+    setView('splash');
+  </script>
+</body>
+</html>

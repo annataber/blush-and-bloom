@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'howell';
+  src: url('/assets/fonts/howell.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'edwardian';
+  src: url('/assets/fonts/edwardian.woff2') format('woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #F6EAE7;
+  color: #d69495;
+  background-image: url('/assets/images/flowers.webp');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 400px 300px;
+}
+
+.view {
+  opacity: 0;
+  display: none;
+
+  &.view-selected {
+    display: block;
+  }
+}
+
+h1 {
+  font-family: edwardian;
+  font-size: 3.5rem;
+  white-space: nowrap;
+  margin-top: -40px;
+}
+
+
+h2 {
+  font-family: howell;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.container {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  background:#d69495;
+  padding: 10px 40px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 2rem;
+  box-shadow: 2px 2px 4px #ddd;
+
+  margin-top: 80px;
+  font-family: howell;
+
+  cursor: pointer;
+}
+
+.button:active {
+  box-shadow: 0px 0px 0px #ddd;
+}
+
+ul.color-chooser {
+  margin-top: 50px;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    height: 18vw;
+    width: 18vw;
+    border-radius: 25vw;
+    border: 2px solid #cddd;
+    box-shadow: 2px 2px 4px #ddd;
+    cursor: pointer;
+    position: relative;
+  }
+
+  li.selected {
+    border-color: #d69495;
+    background-image: url('/assets/images/sparkle.gif');
+    background-position: center center;
+    background-size: 100%;
+    background-blend-mode: lighten;
+  }
+}
+
+ul.button-chooser {
+  margin-top: 50px;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    height: 18vw;
+    width: 18vw;
+    border-radius: 25vw;
+    border: 2px solid #cddd;
+    box-shadow: 2px 2px 4px #ddd;
+    cursor: pointer;
+    position: relative;
+  }
+
+  li.selected {
+    border-color: #d69495;
+    background-image: url('/assets/images/sparkle.gif');
+    background-position: center center;
+    background-size: 100%;
+    background-blend-mode: lighten;
+  }
+}
+
+#view-splash {
+  img {
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+  }
+
+  .button {
+    margin-top: 60px;
+    padding: 20px 40px;
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+#view-skin-tone {
+
+  li {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .color-1 {
+    background-color: #44312B;
+  }
+
+  .color-2 {
+    background-color: #8F5E46;
+  }
+
+  .color-3 {
+    background-color: #9B7B6C;
+  }
+
+  .color-4 {
+    background-color: #E9BC8B;
+  }
+
+  .color-5 {
+    background-color: #E8CFB1;
+  }
+
+  .color-6 {
+    background-color: #F6E8D7;
+  }
+
+  .color-7 {
+    background-color: #f8efe5;
+  }
+}
+
+#view-hair-color {
+
+  .color-1 {
+    background-color: #44312B;
+  }
+
+  .color-2 {
+    background-color: #8F5E46;
+  }
+
+  .color-3 {
+    background-color: #9B7B6C;
+  }
+
+  .color-4 {
+    background-color: #E9BC8B;
+  }
+
+  .color-5 {
+    background-color: #E8CFB1;
+  }
+
+}
+
+
+#view-eye-color {
+
+  .color-1 {
+    background-color: #44312B;
+  }
+
+  .color-2 {
+    background-color: #8F5E46;
+  }
+
+  .color-3 {
+    background-color: #9B7B6C;
+  }
+
+  .color-4 {
+    background-color: #E9BC8B;
+  }
+
+  .color-5 {
+    background-color: #E8CFB1;
+  }
+
+}
