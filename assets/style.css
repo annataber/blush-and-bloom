@@ -33,7 +33,6 @@ body {
   opacity: 0;
   display: none;
 
-
   &.view-selected {
     display: block;
   }
@@ -126,11 +125,11 @@ ul.button-chooser {
   li.selected {
     color: #fff;
     border-color: #7a494a;
-    background-color: #d69495;
     background-image: url('/assets/images/sparkle.gif');
+    background-color: rgba(214,148,149,0.5);
     background-position: center center;
     background-size: 100%;
-    background-blend-mode: lighten;
+    background-blend-mode: darken;
   }
 }
 
@@ -237,4 +236,74 @@ ul.button-chooser {
     background-color: #E8CFB1;
   }
 
+}
+
+#view-products {
+  height: 100vh;
+
+  &.view-selected {
+    display: flex;
+  }
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  h2 {
+    margin: 20px 0 0 0;
+  }
+
+  .button {
+    margin: 20px 40px;
+  }
+
+  #product-list {
+    list-style: none;
+
+    height: 100%;
+    overflow-y: scroll;
+
+    a {
+      display: block;
+      border: 1px solid #d69495;
+      background: #fdf3f1;
+      margin: 10px 40px;
+      padding: 10px;
+      border-radius: 20px;
+      display: flex;
+
+      text-decoration: none;
+
+      opacity: 0.9;
+
+      img {
+        width: 100px;
+      }
+
+      .product-image {
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        border-radius: 12px;
+        border: 1px solid #edb9ba;
+      }
+
+      .product-details {
+        width: 75%;
+        padding: 0 20px;
+
+        h3 {
+          color: #bb8081
+        }
+
+        p {
+          margin: 10px 0;
+          line-height: 1.2rem;
+        }
+
+        .price {
+          color: #bb8081
+        }
+      }
+    }
+  }
 }

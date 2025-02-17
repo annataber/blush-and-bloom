@@ -103,12 +103,13 @@
         <li class="button" data-choice="4" onclick="storeData('price-range', this)">$50 - $75</li>
       </ul>
 
-      <div class="button" onclick="setView('results', this)">Show me the makeup!</div>
+      <div class="button" onclick="setView('products', this)">Show me the makeup!</div>
     </div>
 
-    <div id="view-results" class="view">
-      <h2>The good stuff</h2>
-      <p>Coming soon.</p>
+    <div id="view-products" class="view">
+      <h2>The Good Stuff</h2>
+      <div id="product-list"></div>
+      <div class="button" onclick="setView('splash', this)">Change my choices</div>
     </div>
   </div>
   <script src="/assets/app.js"></script>
@@ -122,6 +123,12 @@
     ].forEach((dataType) => loadData(dataType));
 
     setView('splash');
+
+    (async function() {
+      await fetchDataFromSheets();
+      setView('products');
+    }());
+
   </script>
 </body>
 </html>
