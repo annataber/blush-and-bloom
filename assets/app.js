@@ -136,6 +136,9 @@ function buildProductList() {
   const matchingProducts = findMatchingProducts();
   console.log('matchingProducts', matchingProducts);
 
+  // scroll list back to top in case user had scrolled down in a previous view
+  list.scrollTop = 0;
+
   if (!matchingProducts.length) {
     list.innerHTML = `<p class="sorry">Sorry, no makeup found! Try changing your choices.</p>`;
   }
