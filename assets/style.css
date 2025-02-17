@@ -192,23 +192,23 @@ ul.button-chooser {
 #view-hair-color {
 
   .color-1 {
-    background-color: #44312B;
+    background-color: #C95104;
   }
 
   .color-2 {
-    background-color: #8F5E46;
+    background-color: #241B1B;
   }
 
   .color-3 {
-    background-color: #9B7B6C;
+    background-color: #8F5E46;
   }
 
   .color-4 {
-    background-color: #E9BC8B;
+    background-color: #E4A98E;
   }
 
   .color-5 {
-    background-color: #E8CFB1;
+    background-color: #FBDFB6;
   }
 
 }
@@ -217,23 +217,23 @@ ul.button-chooser {
 #view-eye-color {
 
   .color-1 {
-    background-color: #44312B;
+    background-color: #2C1512;
   }
 
   .color-2 {
-    background-color: #8F5E46;
+    background-color: #6D412A;
   }
 
   .color-3 {
-    background-color: #9B7B6C;
+    background-color: #B2935C;
   }
 
   .color-4 {
-    background-color: #E9BC8B;
+    background-color: #B1D5DF;
   }
 
   .color-5 {
-    background-color: #E8CFB1;
+    background-color: #88B27E;
   }
 
 }
@@ -252,6 +252,10 @@ ul.button-chooser {
     margin: 20px 0 0 0;
   }
 
+  p.sorry {
+    margin-top: 50%;
+  }
+
   .button {
     margin: 20px 40px;
   }
@@ -261,6 +265,10 @@ ul.button-chooser {
 
     height: 100%;
     overflow-y: scroll;
+    padding-top: 25px;
+
+    /* fade out scroll view at top and bottom */
+    mask-image: linear-gradient(to bottom, transparent 0%, black 50px, black calc(100% - 50px), transparent 100%);
 
     a {
       display: block;

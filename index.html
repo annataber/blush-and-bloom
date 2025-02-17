@@ -41,13 +41,13 @@
       <h2>What is your skin tone?</h2>
 
       <ul class="color-chooser skin-tone">
-        <li class="color-1" data-choice="1" onclick="storeData('skin-tone', this)"></li>
-        <li class="color-2" data-choice="2" onclick="storeData('skin-tone', this)"></li>
-        <li class="color-3" data-choice="3" onclick="storeData('skin-tone', this)"></li>
-        <li class="color-4" data-choice="4" onclick="storeData('skin-tone', this)"></li>
-        <li class="color-5" data-choice="5" onclick="storeData('skin-tone', this)"></li>
-        <li class="color-6" data-choice="6" onclick="storeData('skin-tone', this)"></li>
-        <li class="color-7" data-choice="7" onclick="storeData('skin-tone', this)"></li>
+        <li class="color-1" data-choice="1" onclick="storeChoice('skin-tone', this)"></li>
+        <li class="color-2" data-choice="2" onclick="storeChoice('skin-tone', this)"></li>
+        <li class="color-3" data-choice="3" onclick="storeChoice('skin-tone', this)"></li>
+        <li class="color-4" data-choice="4" onclick="storeChoice('skin-tone', this)"></li>
+        <li class="color-5" data-choice="5" onclick="storeChoice('skin-tone', this)"></li>
+        <li class="color-6" data-choice="6" onclick="storeChoice('skin-tone', this)"></li>
+        <li class="color-7" data-choice="7" onclick="storeChoice('skin-tone', this)"></li>
       </ul>
 
       <div class="button" onclick="setView('hair-color', this)">Next</div>
@@ -57,11 +57,11 @@
       <h2>What is your hair color?</h2>
 
       <ul class="color-chooser">
-        <li class="color-1" data-choice="1" onclick="storeData('hair-color', this)"></li>
-        <li class="color-2" data-choice="2" onclick="storeData('hair-color', this)"></li>
-        <li class="color-3" data-choice="3" onclick="storeData('hair-color', this)"></li>
-        <li class="color-4" data-choice="4" onclick="storeData('hair-color', this)"></li>
-        <li class="color-5" data-choice="5" onclick="storeData('hair-color', this)"></li>
+        <li class="color-1" data-choice="1" onclick="storeChoice('hair-color', this)"></li>
+        <li class="color-2" data-choice="2" onclick="storeChoice('hair-color', this)"></li>
+        <li class="color-3" data-choice="3" onclick="storeChoice('hair-color', this)"></li>
+        <li class="color-4" data-choice="4" onclick="storeChoice('hair-color', this)"></li>
+        <li class="color-5" data-choice="5" onclick="storeChoice('hair-color', this)"></li>
       </ul>
 
       <div class="button" onclick="setView('eye-color', this)">Next</div>
@@ -71,11 +71,11 @@
       <h2>What is your eye color?</h2>
 
       <ul class="color-chooser">
-        <li class="color-1" data-choice="1" onclick="storeData('eye-color', this)"></li>
-        <li class="color-2" data-choice="2" onclick="storeData('eye-color', this)"></li>
-        <li class="color-3" data-choice="3" onclick="storeData('eye-color', this)"></li>
-        <li class="color-4" data-choice="4" onclick="storeData('eye-color', this)"></li>
-        <li class="color-5" data-choice="5" onclick="storeData('eye-color', this)"></li>
+        <li class="color-1" data-choice="1" onclick="storeChoice('eye-color', this)"></li>
+        <li class="color-2" data-choice="2" onclick="storeChoice('eye-color', this)"></li>
+        <li class="color-3" data-choice="3" onclick="storeChoice('eye-color', this)"></li>
+        <li class="color-4" data-choice="4" onclick="storeChoice('eye-color', this)"></li>
+        <li class="color-5" data-choice="5" onclick="storeChoice('eye-color', this)"></li>
       </ul>
 
       <div class="button" onclick="setView('style', this)">Next</div>
@@ -85,9 +85,9 @@
       <h2>What is your personal style?</h2>
 
       <ul class="button-chooser">
-        <li class="button" data-choice="1" onclick="storeData('style', this)">Simple and clean</li>
-        <li class="button" data-choice="2" onclick="storeData('style', this)">Dark and edgy</li>
-        <li class="button" data-choice="3" onclick="storeData('style', this)">Colorful and bright</li>
+        <li class="button" data-choice="1" onclick="storeChoice('style', this)">Simple and clean</li>
+        <li class="button" data-choice="2" onclick="storeChoice('style', this)">Dark and edgy</li>
+        <li class="button" data-choice="3" onclick="storeChoice('style', this)">Colorful and bright</li>
       </ul>
 
       <div class="button" onclick="setView('price-range', this)">Next</div>
@@ -97,10 +97,10 @@
       <h2>What is your price range?</h2>
 
       <ul class="button-chooser">
-        <li class="button" data-choice="1" onclick="storeData('price-range', this)">$1 - $15</li>
-        <li class="button" data-choice="2" onclick="storeData('price-range', this)">$15 - $25</li>
-        <li class="button" data-choice="3" onclick="storeData('price-range', this)">$25 - $50</li>
-        <li class="button" data-choice="4" onclick="storeData('price-range', this)">$50 - $75</li>
+        <li class="button" data-choice="1" onclick="storeChoice('price-range', this)">$1 - $25</li>
+        <li class="button" data-choice="2" onclick="storeChoice('price-range', this)">$25 - $50</li>
+        <li class="button" data-choice="3" onclick="storeChoice('price-range', this)">$50 - $75</li>
+        <li class="button" data-choice="4" onclick="storeChoice('price-range', this)">$75 - $250</li>
       </ul>
 
       <div class="button" onclick="setView('products', this)">Show me the makeup!</div>
@@ -109,7 +109,7 @@
     <div id="view-products" class="view">
       <h2>The Good Stuff</h2>
       <div id="product-list"></div>
-      <div class="button" onclick="setView('splash', this)">Change my choices</div>
+      <div class="button" onclick="clearChoices(); setView('splash', this);">Change my choices</div>
     </div>
   </div>
   <script src="/assets/app.js"></script>
@@ -120,15 +120,10 @@
       'eye-color',
       'style',
       'price-range',
-    ].forEach((dataType) => loadData(dataType));
+    ].forEach((dataType) => loadChoice(dataType));
 
     setView('splash');
-
-    (async function() {
-      await fetchDataFromSheets();
-      setView('products');
-    }());
-
+    fetchDataFromSheets()
   </script>
 </body>
 </html>
