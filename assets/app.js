@@ -98,8 +98,7 @@ function findMatchingProducts() {
   const ranges = {
     '1': [0, 25],
     '2': [25, 50],
-    '3': [50, 75],
-    '4': [75, 1000],
+    '3': [50, 1000],
   };
 
   console.log('stored data', { eyeColor, hairColor, skinTone, priceRange, style });

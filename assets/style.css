@@ -85,12 +85,17 @@ ul.color-chooser {
   margin-top: 50px;
   list-style: none;
 
+  max-width: 600px;
+  width: 100%;
+
   li {
     margin: 0;
     padding: 0;
     display: inline-block;
     height: 18vw;
     width: 18vw;
+    max-height: 100px;
+    max-width: 100px;
     border-radius: 25vw;
     border: 2px solid #cddd;
     box-shadow: 2px 2px 4px #ddd;
